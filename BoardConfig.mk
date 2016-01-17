@@ -24,14 +24,18 @@ include device/samsung/tabpro-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := mondrianwifi,mondrianwifiue,mondrianwifixx,mondrianlte,mondrianltexx
 
+#TEST
+#$(shell mkdir -p $(OUT)/obj/SHARED_LIBRARIES/libril_intermediates)
+#$(shell touch $(OUT)/obj/SHARED_LIBRARIES/libril_intermediates/export_includes)
+
 # Kernel
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/mondrianlte/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cyanogenmod_mondrian_defconfig
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/mondrianlte/bluetooth
 BLUETOOTH_HCI_USE_MCT := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/mondrianlte/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_SMD_TTY := true
 

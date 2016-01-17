@@ -33,4 +33,5 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := SM-T325
 
 $(call inherit-product, device/samsung/mondrianlte/device.mk)
-$(call inherit-product-if-exists, vendor/samsung/tabpro-common/tabpro-common-vendor.mk)
+#$(call inherit-product-if-exists, vendor/samsung/tabpro-common/tabpro-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/mondrianlte/mondrianlte-vendor.mk)
